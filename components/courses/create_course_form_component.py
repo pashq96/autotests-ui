@@ -1,5 +1,5 @@
 from playwright.sync_api import Page
-
+import allure
 from components.base_component import BaseComponent
 from elements.input import Input
 from elements.textarea import Textarea
@@ -9,12 +9,14 @@ class CreateCourseFormComponent(BaseComponent):
     def __init__(self, page: Page):
         super().__init__(page)
 
-        self.create_course_title_input = Input(page, 'create-course-form-title-input', 'Input')
-        self.create_course_estimated_time_input = Input(page, 'create-course-form-estimated-time-input', 'Input')
-        self.create_course_description_textarea = Textarea(page, 'create-course-form-description-input', 'Textarea')
-        self.create_course_max_score_input = Input(page, 'create-course-form-max-score-input', 'Input')
-        self.create_course_min_score_input = Input(page, 'create-course-form-min-score-input', 'Input')
+        self.create_course_title_input = Input(page, 'create-course-form-title-input', 'Title')
+        self.create_course_estimated_time_input = Input(page, 'create-course-form-estimated-time-input',
+                                                        'Estimated time')
+        self.create_course_description_textarea = Textarea(page, 'create-course-form-description-input', 'Description')
+        self.create_course_max_score_input = Input(page, 'create-course-form-max-score-input', 'Max score')
+        self.create_course_min_score_input = Input(page, 'create-course-form-min-score-input', 'Min score')
 
+    @allure.step('Fill create course form')
     def fill(
             self,
             title: str,
@@ -38,6 +40,7 @@ class CreateCourseFormComponent(BaseComponent):
         self.create_course_min_score_input.fill(min_score)
         self.create_course_min_score_input.check_have_value(min_score)
 
+    @allure.step('Check visible create course form')
     def check_visible(
             self,
             title: str,
