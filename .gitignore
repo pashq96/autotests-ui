@@ -2,6 +2,7 @@
 browser-state.json
 allure-results/
 allure-report/
+tracing/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
