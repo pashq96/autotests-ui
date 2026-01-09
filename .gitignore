@@ -1,5 +1,7 @@
 # test data
 browser-state.json
+allure-results/
+allure-report/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
