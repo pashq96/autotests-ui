@@ -6,3 +6,4 @@ allure-pytest
 pydantic
 pydantic-settings
 pydantic[email]
+pytest-xdist
