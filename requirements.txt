@@ -3,3 +3,6 @@ pytest
 pytest-playwright
 pytest-rerunfailures
 allure-pytest
+pydantic
+pydantic-settings
+pydantic[email]
