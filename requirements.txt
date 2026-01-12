@@ -7,3 +7,4 @@ pydantic
 pydantic-settings
 pydantic[email]
 pytest-xdist
+email_validator
